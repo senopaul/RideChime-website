@@ -229,34 +229,21 @@
 .ridechime-site .ridechime-school-section h2{color:#fff}
 .ridechime-site .ridechime-school-section .ridechime-text-link{color:#f3d273}
 
-/* A quieter school showcase: useful information without a pretend dashboard. */
-.ridechime-site .ridechime-school-section{background:#fbfaf7;color:#172142;padding-block:108px;border-block:1px solid #ece7ef}
-.ridechime-site .ridechime-school-section:before{display:none}
-.ridechime-site .ridechime-school-grid{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:80px;align-items:center}
-.ridechime-site .ridechime-school-section .ridechime-school-copy{max-width:520px}
-.ridechime-site .ridechime-school-section .ridechime-eyebrow{color:#7042ba}
-.ridechime-site .ridechime-school-section h2{color:#141d43;font-size:clamp(38px,4.2vw,54px);line-height:1.08;letter-spacing:-2.8px}
-.ridechime-site .ridechime-school-intro{color:#5e687b;font-size:15px;line-height:1.85;margin:22px 0 28px}
-.ridechime-site .ridechime-school-steps{display:grid;margin-bottom:23px}
-.ridechime-site .ridechime-school-steps article{display:grid;grid-template-columns:36px 1fr;gap:13px;padding:15px 0;border-top:1px solid #e8e3eb}
-.ridechime-site .ridechime-school-steps article:last-child{border-bottom:1px solid #e8e3eb}
-.ridechime-site .ridechime-school-steps article>span{display:grid;place-items:center;width:29px;height:29px;border:1px solid #e4daef;border-radius:50%;color:#7042ba;font-size:10px;font-weight:800}
-.ridechime-site .ridechime-school-steps b{font-size:14px;color:#232c47}
-.ridechime-site .ridechime-school-steps p{margin:3px 0 0;color:#687286;font-size:12px;line-height:1.65}
-.ridechime-site .ridechime-school-section .ridechime-text-link{color:#7042ba}
-.ridechime-site .ridechime-journey-card{background:#fff;border:1px solid #e8e2ed;border-radius:24px;padding:28px 30px 19px;box-shadow:0 20px 55px #2112390b}
-.ridechime-site .ridechime-journey-card-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:18px;border-bottom:1px solid #eeeaf1;color:#665c77;font-size:9px;font-weight:800;letter-spacing:1.25px}
-.ridechime-site .ridechime-journey-card-head span:last-child{color:#7042ba;font-size:8px;letter-spacing:.8px}
-.ridechime-site .ridechime-journey-flow{position:relative;display:grid;gap:0;padding:30px 5px}
-.ridechime-site .ridechime-journey-node{position:relative;z-index:1;display:flex;align-items:center;gap:14px;background:#fff}
-.ridechime-site .ridechime-journey-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:#f1ebf8;color:#7042ba;border:1px solid #e6dcef}
-.ridechime-site .ridechime-journey-icon-end{background:#f7f3e8;color:#99731a;border-color:#eee4c7}
-.ridechime-site .ridechime-journey-node b{display:block;color:#27304b;font-size:14px}
-.ridechime-site .ridechime-journey-node small{display:block;margin-top:3px;color:#788195;font-size:11px}
-.ridechime-site .ridechime-journey-path{height:42px;margin-left:21px;border-left:1px dashed #baa7d3;display:flex;align-items:center}
-.ridechime-site .ridechime-journey-path span{display:grid;place-items:center;width:38px;height:38px;margin-left:-19px;border-radius:50%;background:#7042ba;color:#fff;border:4px solid #fff;box-shadow:0 0 0 1px #e6dcef}
-.ridechime-site .ridechime-journey-card-foot{display:flex;gap:11px;align-items:center;border-top:1px solid #eeeaf1;padding:17px 4px 7px;color:#5d6578;font-size:11px;line-height:1.6}
-.ridechime-site .ridechime-journey-card-foot svg{flex:0 0 auto;color:#7042ba}
-.ridechime-site .ridechime-journey-caption{margin:15px 0 0;text-align:right;color:#9299a7;font-size:9px}
-@media(max-width:1000px){.ridechime-site .ridechime-school-grid{gap:48px}}
-@media(max-width:760px){.ridechime-site .ridechime-school-section{padding-block:72px}.ridechime-site .ridechime-school-grid{grid-template-columns:1fr;gap:35px}.ridechime-site .ridechime-school-section h2{font-size:38px}.ridechime-site .ridechime-journey-card{padding:22px 20px 16px;border-radius:19px}}
+/* FAQ redesign: plainspoken answers in a quiet, easy-to-scan accordion. */
+.ridechime-site .ridechime-faq-section{grid-template-columns:minmax(250px,.8fr) minmax(0,1.4fr);gap:78px;align-items:start;padding-block:104px}
+.ridechime-site .ridechime-faq-intro{position:sticky;top:125px;max-width:390px}
+.ridechime-site .ridechime-faq-intro .ridechime-eyebrow{color:#7042ba}
+.ridechime-site .ridechime-faq-intro h2{font-size:clamp(38px,4vw,50px);line-height:1.08;letter-spacing:-2.8px;color:#141d43}
+.ridechime-site .ridechime-faq-intro>p:not(.ridechime-eyebrow){margin:18px 0 20px;color:#5f687b;font-size:14px;line-height:1.8}
+.ridechime-site .ridechime-faq-intro .ridechime-text-link{display:inline-flex;align-items:center;gap:8px;color:#7042ba;font-size:12px}
+.ridechime-site .ridechime-faqs{background:#fff;border:1px solid #e9e4ed;border-radius:22px;padding:6px 26px;box-shadow:0 14px 40px #24143b08}
+.ridechime-site .ridechime-faqs details{border-color:#eeeaf1}
+.ridechime-site .ridechime-faqs summary{display:flex;align-items:center;justify-content:flex-start;gap:14px;padding:20px 0;color:#202a46;font-size:13px;font-weight:700;line-height:1.5}
+.ridechime-site .ridechime-faq-number{flex:0 0 30px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#f3eef9;color:#7042ba;font-size:9px;font-weight:800;letter-spacing:.4px}
+.ridechime-site .ridechime-faq-question{flex:1}
+.ridechime-site .ridechime-faq-toggle{flex:0 0 auto;color:#7042ba;font-size:18px;line-height:1;font-weight:500}
+.ridechime-site .ridechime-faqs details[open] .ridechime-faq-toggle{transform:rotate(45deg)}
+.ridechime-site .ridechime-faqs details p{margin:0 0 20px 44px;color:#606b7f;font-size:12px;line-height:1.8;max-width:650px}
+.ridechime-site .ridechime-faqs summary:hover .ridechime-faq-question{color:#7042ba}
+@media(max-width:900px){.ridechime-site .ridechime-faq-section{grid-template-columns:1fr;gap:32px}.ridechime-site .ridechime-faq-intro{position:static;max-width:600px}}
+@media(max-width:760px){.ridechime-site .ridechime-faq-section{padding-block:72px}.ridechime-site .ridechime-faqs{padding:4px 18px;border-radius:18px}.ridechime-site .ridechime-faqs summary{gap:10px;padding:17px 0;font-size:12px}.ridechime-site .ridechime-faq-number{flex-basis:27px;width:27px;height:27px}.ridechime-site .ridechime-faqs details p{margin-left:37px}}
