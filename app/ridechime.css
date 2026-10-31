@@ -304,3 +304,5 @@
 .ridechime-site .ridechime-faq-column details p{margin:0;padding:0 24px 19px 0;color:#596574;font-size:12px;line-height:1.75}
 @media(max-width:850px){.ridechime-site .ridechime-faq-section{padding:70px 32px}.ridechime-site .ridechime-faq-intro{gap:36px}}
 @media(max-width:680px){.ridechime-site .ridechime-faq-section{padding:58px 20px}.ridechime-site .ridechime-faq-intro{display:block;margin-bottom:24px}.ridechime-site .ridechime-faq-intro h2{font-size:36px;letter-spacing:-1.5px}.ridechime-site .ridechime-faq-intro-side{margin-top:14px}.ridechime-site .ridechime-faqs{grid-template-columns:1fr;padding:3px 16px}.ridechime-site .ridechime-faq-column{padding:0 5px}.ridechime-site .ridechime-faq-column+.ridechime-faq-column{border-left:0;border-top:1px solid #e5e1e9}.ridechime-site .ridechime-faq-column summary{font-size:13px;min-height:58px;padding:14px 0}.ridechime-site .ridechime-faq-column details p{font-size:12px}}
+
+.ridechime-site .ridechime-faq-section{box-sizing:border-box}
