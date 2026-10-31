@@ -1,6 +1,6 @@
 # RideChime marketing website
 
-Public, static marketing site for RideChime. The invite-only tracking application is maintained separately in the private `senopaul/RideChime` repository and will be served at `app.ridechime.com` after its custom domain is configured.
+Public, static marketing site for RideChime. The invite-only live-location application is maintained separately in the private `senopaul/RideChime` repository and will be served at `app.ridechime.com` after its custom domain is configured.
 
 ## Local development
 
@@ -21,4 +21,4 @@ Next.js exports a static website into `out/`, suitable for Cloudflare Pages or a
 
 ## Current product claims
 
-The page describes a supervised pilot and does not promise that every GPS device, automatic parent alert, family account, or live ETA is available. Confirm provider and device compatibility before making a rollout commitment.
+The page describes a supervised pilot and does not promise that every vehicle-location device, automatic parent alert, family account, or live ETA is available. Confirm provider and device compatibility before making a rollout commitment.

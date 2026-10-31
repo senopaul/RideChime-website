@@ -1,7 +1,7 @@
 import RideChimeHome from './ridechime-home';
 
 const origin = 'https://ridechime.com';
-const description = 'School transport tracking in Uganda for vans, minibuses, cars and buses. Explore RideChime’s GPS, pickup route and boarding-record pilot.';
+const description = 'School transport live locations in Uganda for vans, minibuses, cars and buses. Explore RideChime’s vehicle location updates, pickup routes and boarding-record pilot.';
 const identity = {
   '@context': 'https://schema.org',
   '@graph': [
