@@ -7,17 +7,19 @@
     </linearGradient>
   </defs>
   <rect x="1" y="1" width="62" height="62" rx="17" fill="url(#ridechime-violet)"/>
-  <!-- Chime arcs sit above the bus so the two symbols stay distinct. -->
-  <path d="M44 11c7 3 11 8 12 15M47 7c10 4 15 11 16 21" fill="none" stroke="#f5c542" stroke-width="2.8" stroke-linecap="round"/>
-  <!-- A simplified front-facing school bus with a broad windshield and clear lamps. -->
-  <path d="M15 25a7 7 0 0 1 7-7h20a7 7 0 0 1 7 7v19a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3z" fill="#fff"/>
-  <path d="M21 22h22a2 2 0 0 1 2 2v9H19v-9a2 2 0 0 1 2-2z" fill="#6840b4"/>
-  <path d="M32 23v9" stroke="#bda4ec" stroke-width="1.6"/>
-  <path d="M15 27h-3v6h3m34-6h3v6h-3" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="22" cy="39" r="2.4" fill="#f5c542"/>
-  <circle cx="42" cy="39" r="2.4" fill="#f5c542"/>
-  <path d="M27 39h10M22 47v2m20-2v2" fill="none" stroke="#5632a0" stroke-width="2.2" stroke-linecap="round"/>
-  <!-- A route underline and location stop complete the mark without crossing the bus. -->
-  <path d="M10 54c6-5 11 2 17 0s11-3 17 0" fill="none" stroke="#f5c542" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="48" cy="54" r="3.3" fill="none" stroke="#f5c542" stroke-width="3"/>
+  <!-- Chime arcs signal the brand; the bus remains the clear central symbol. -->
+  <path d="M45 10c7 3 11 8 12 15M48 6c10 4 15 11 16 21" fill="none" stroke="#f5c542" stroke-width="2.7" stroke-linecap="round"/>
+  <!-- Side-on school bus with distinct windows, front cab and wheels. -->
+  <path d="M9 24a5 5 0 0 1 5-5h30a7 7 0 0 1 7 7v16H9z" fill="#fff"/>
+  <path d="M14 23h5v11h-5zm8 0h6v11h-6zm9 0h6v11h-6zm9 0h3a3 3 0 0 1 3 3v8h-6z" fill="#6540ae"/>
+  <path d="M50 27h3l3 5v8h-6z" fill="#fff"/>
+  <path d="M50 29h2l2 4v3h-4z" fill="#6540ae"/>
+  <path d="M9 36h40v4H9z" fill="#f5c542"/>
+  <path d="M8 40h49v3H8z" fill="#fff"/>
+  <circle cx="19" cy="44" r="5" fill="#35245f"/>
+  <circle cx="19" cy="44" r="2.2" fill="#f5c542"/>
+  <circle cx="45" cy="44" r="5" fill="#35245f"/>
+  <circle cx="45" cy="44" r="2.2" fill="#f5c542"/>
+  <path d="M10 53c6-3 11 1 16 0" fill="none" stroke="#f5c542" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="30" cy="53" r="2.5" fill="none" stroke="#f5c542" stroke-width="2.8"/>
 </svg>
