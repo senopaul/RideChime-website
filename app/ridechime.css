@@ -214,3 +214,7 @@
  .ridechime-brand small{font-size:6.5px}
 }
 @media(prefers-reduced-motion:reduce){.ridechime-site *{scroll-behavior:auto!important;transition:none!important}.ridechime-steps article:hover,.ridechime-site .ridechime-button:hover{transform:none}}
+
+/* Purple leads the primary CTA; gold stays in the route illustration and fine accents. */
+.ridechime-site .ridechime-button-yellow{background:var(--ridechime-purple);color:#fff;box-shadow:0 9px 24px #7042ba26}
+.ridechime-site .ridechime-button-yellow:hover{background:var(--ridechime-purple-deep);box-shadow:0 12px 28px #7042ba35}
