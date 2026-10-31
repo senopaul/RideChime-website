@@ -280,3 +280,6 @@
 .ridechime-site .ridechime-faqs details[open] p{animation:ridechime-faq-reveal .18s ease-out both}
 @keyframes ridechime-faq-reveal{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){.ridechime-site .ridechime-faqs .ridechime-faq-toggle{transition:none}.ridechime-site .ridechime-faqs details[open] p{animation:none}}
+
+/* Prevent the legacy open-state transform from rotating the question text. */
+.ridechime-site .ridechime-faqs details[open] summary>span{transform:none}
