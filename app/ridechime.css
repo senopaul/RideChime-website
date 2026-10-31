@@ -223,3 +223,8 @@
 .ridechime-site .ridechime-pilot-note{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #ead9aa;border-radius:999px;background:#fff9e9;color:#72540f;font-size:13px;font-weight:600;line-height:1.4}
 .ridechime-site .ridechime-pilot-note>span{width:8px;height:8px;box-shadow:0 0 0 4px #e5b83f28;background:#b98515}
 @media(max-width:760px){.ridechime-site .ridechime-pilot-note{font-size:12px;padding:9px 12px;white-space:normal}}
+
+/* Preserve readable contrast inside the dark school showcase. */
+.ridechime-site .ridechime-school-section .ridechime-eyebrow{color:#e1d3ff}
+.ridechime-site .ridechime-school-section h2{color:#fff}
+.ridechime-site .ridechime-school-section .ridechime-text-link{color:#f3d273}
