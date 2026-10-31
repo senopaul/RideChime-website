@@ -270,3 +270,13 @@
 .ridechime-site .ridechime-faqs summary .ridechime-faq-question{color:#18243d}
 .ridechime-site .ridechime-faqs summary .ridechime-faq-toggle{color:#66508c}
 .ridechime-site .ridechime-faqs summary:hover .ridechime-faq-question{color:#342750}
+
+/* Keep FAQ interaction discreet: stable text color, quiet plus/minus, soft answer reveal. */
+.ridechime-site .ridechime-faqs summary:hover .ridechime-faq-question{color:#18243d}
+.ridechime-site .ridechime-faqs .ridechime-faq-toggle{width:20px;height:20px;display:inline-grid;place-items:center;font-size:0;color:#756a83;line-height:1;transform:none;transition:color .16s ease}
+.ridechime-site .ridechime-faqs .ridechime-faq-toggle::before{content:"+";font-size:17px;font-weight:400}
+.ridechime-site .ridechime-faqs details[open] .ridechime-faq-toggle{transform:none;color:#756a83}
+.ridechime-site .ridechime-faqs details[open] .ridechime-faq-toggle::before{content:"−";font-size:18px}
+.ridechime-site .ridechime-faqs details[open] p{animation:ridechime-faq-reveal .18s ease-out both}
+@keyframes ridechime-faq-reveal{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.ridechime-site .ridechime-faqs .ridechime-faq-toggle{transition:none}.ridechime-site .ridechime-faqs details[open] p{animation:none}}
