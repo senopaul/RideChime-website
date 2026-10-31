@@ -36,3 +36,8 @@
 .ridechime-site .ridechime-faqs summary span{color:var(--ridechime-purple)}
 .ridechime-site a:focus-visible{outline-color:var(--ridechime-purple)}
 .ridechime-site .ridechime-button-yellow{background:var(--ridechime-yellow)}
+
+/* Keep both halves of the wordmark at full brand size in headers and footer. */
+.ridechime-site .ridechime-brand b .ridechime-word-ride,.ridechime-site .ridechime-brand b .ridechime-word-chime{display:inline;margin:0;vertical-align:baseline;font-size:inherit;line-height:inherit}
+.ridechime-site .ridechime-footer .ridechime-brand b{font-size:30px}
+.ridechime-site .ridechime-footer .ridechime-brand small{font-size:9px}
