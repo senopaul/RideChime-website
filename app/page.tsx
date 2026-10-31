@@ -7,9 +7,9 @@ const identity = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://sky-worths.com/#operator',
-      name: 'SKY WORTH LIMITED',
-      url: 'https://sky-worths.com',
+      '@id': `${origin}/#organization`,
+      name: 'RideChime',
+      url: origin,
       telephone: '+256703664233'
     },
     {
@@ -18,7 +18,7 @@ const identity = {
       name: 'RideChime',
       url: `${origin}/`,
       description,
-      publisher: { '@id': 'https://sky-worths.com/#operator' },
+      publisher: { '@id': `${origin}/#organization` },
       inLanguage: 'en-UG'
     }
   ]
