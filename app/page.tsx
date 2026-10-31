@@ -1,4 +1,4 @@
-import RideChimeHome from './saferide-home';
+import RideChimeHome from './ridechime-home';
 
 const origin = 'https://ridechime.com';
 const description = 'School transport tracking in Uganda for vans, minibuses, cars and buses. Explore RideChime’s GPS, pickup route and boarding-record pilot.';
