@@ -20,3 +20,19 @@
 
 /* Keep the RideChime message readable on narrow phones. */
 .ridechime-site .ridechime-hero h1 em{white-space:normal}
+
+/* RideChime brand palette: purple identity, navy readability, gold highlights. */
+.ridechime-site{--ridechime-purple:#7042ba;--ridechime-purple-deep:#5632a0;--ridechime-purple-soft:#f4effb;--ridechime-purple-line:#e3d9f1;--ridechime-yellow:#f5c542}
+.ridechime-site .ridechime-brand b{color:#0b173f}
+.ridechime-site .ridechime-brand b .ridechime-word-chime{color:var(--ridechime-purple)}
+.ridechime-site .ridechime-eyebrow>span{background:var(--ridechime-purple)}
+.ridechime-site .ridechime-school-section .ridechime-eyebrow{color:var(--ridechime-purple)}
+.ridechime-site .ridechime-demo-section{background:var(--ridechime-purple-soft)}
+.ridechime-site .ridechime-demo-section .ridechime-eyebrow{color:var(--ridechime-purple)}
+.ridechime-site .ridechime-step-top>svg,.ridechime-site .ridechime-ribbon svg,.ridechime-site .ridechime-parent-principle>svg,.ridechime-site .ridechime-round-icon{color:var(--ridechime-purple)}
+.ridechime-site .ridechime-pilot-section{background:var(--ridechime-purple-soft);border-color:var(--ridechime-purple-line)}
+.ridechime-site .ridechime-round-icon{border-color:var(--ridechime-purple-line);background:#fff}
+.ridechime-site .ridechime-pilot-foot{border-color:var(--ridechime-purple-line);color:var(--ridechime-purple-deep)}
+.ridechime-site .ridechime-faqs summary span{color:var(--ridechime-purple)}
+.ridechime-site a:focus-visible{outline-color:var(--ridechime-purple)}
+.ridechime-site .ridechime-button-yellow{background:var(--ridechime-yellow)}
