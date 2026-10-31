@@ -218,3 +218,8 @@
 /* Purple leads the primary CTA; gold stays in the route illustration and fine accents. */
 .ridechime-site .ridechime-button-yellow{background:var(--ridechime-purple);color:#fff;box-shadow:0 9px 24px #7042ba26}
 .ridechime-site .ridechime-button-yellow:hover{background:var(--ridechime-purple-deep);box-shadow:0 12px 28px #7042ba35}
+
+/* Make the pilot invitation beneath the hero CTA easy to notice and read. */
+.ridechime-site .ridechime-pilot-note{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #ead9aa;border-radius:999px;background:#fff9e9;color:#72540f;font-size:13px;font-weight:600;line-height:1.4}
+.ridechime-site .ridechime-pilot-note>span{width:8px;height:8px;box-shadow:0 0 0 4px #e5b83f28;background:#b98515}
+@media(max-width:760px){.ridechime-site .ridechime-pilot-note{font-size:12px;padding:9px 12px;white-space:normal}}
