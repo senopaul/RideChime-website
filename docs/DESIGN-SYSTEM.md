@@ -36,7 +36,7 @@ Shared by the marketing site (ridechime.com, repo `RideChime-website`) and the s
   --rc-purple-hover:#4a2896;
   --rc-purple-soft:#f2edfb;   /* selected rows, info panels */
   --rc-purple-line:#ddd2f3;
-  --rc-yellow:#f2b72e;        /* accent only: stripe, small markers, CTA on navy. Never body text */
+  --rc-yellow:#ffc23d;        /* accent only: stripe, small markers, CTA on navy. Never body text */
   --rc-yellow-soft:#fdf4dc;
   /* neutrals */
   --rc-navy:#121a35;          /* headings, dark bands, app sidebar */
@@ -80,3 +80,16 @@ Shared by the marketing site (ridechime.com, repo `RideChime-website`) and the s
 ## 7. Rules for both repos
 
 Visual changes only: no change to authentication, database schema, APIs, tenant boundaries, permissions, or location and boarding logic. Use existing frameworks and assets; no new dependencies for decoration. Both themes must stay readable; keyboard focus is always visible.
+
+## 8. Friendly accents (v2)
+
+Added after review so the products feel welcoming to teachers, parents and children while staying calm. Each accent has one meaning and is used for icons, chips, thin bars and soft panels, never for long body text.
+
+| Token | Value | Soft | Text on soft | Meaning |
+|---|---|---|---|---|
+| `--rc-sun` | `#ffc23d` | `#fff4d4` | `#8a5a00` | The school bus, vehicles, highlights, CTA on purple |
+| `--rc-coral` | `#ff7a5c` | `#ffe9e3` | `#b8402a` | Children and families |
+| `--rc-mint` | `#2fb985` | `#dcf6ea` | `#14724f` | Boarded, done, routes |
+| `--rc-sky` | `#4aa3ff` | `#e3f0ff` | `#1d5fae` | Journeys and live location |
+
+Neutrals warm slightly toward purple: background `#fbfaff`, line `#e7e4f3`, ink (dark bands, app sidebar) `#1e1b4b`. The marketing hero uses a flat illustration (bus, children at stops, school) labelled as example data; no photography of real children.
