@@ -1,11 +1,16 @@
 import {
   ArrowRight,
   ArrowUpRight,
+  Backpack,
+  BellRing,
   BusFront,
   Check,
+  CheckCircle2,
   ClipboardCheck,
   Clock3,
   Building2,
+  GraduationCap,
+  Heart,
   LockKeyhole,
   MapPin,
   MessageCircle,
@@ -23,16 +28,16 @@ const signIn = 'https://app.ridechime.com/login';
 
 const nav = [
   ['#how-it-works', 'How it works'],
+  ['#everyone', 'Who it’s for'],
   ['#schools', 'Schools & operators'],
-  ['#families', 'Families'],
   ['#questions', 'Questions'],
 ] as const;
 
 const steps = [
-  {n: '01', icon: Route, title: 'Plan the journey', body: 'Agree pickup places, order the stops and review the suggested roads with your school.'},
-  {n: '02', icon: ClipboardCheck, title: 'Record boarding', body: 'The school attendant confirms when each child boards and leaves the vehicle. Card readers can come later.'},
-  {n: '03', icon: MapPin, title: 'Review the journey', body: 'Planned routes, available live locations and staff confirmations sit together in one place.'},
-];
+  {n: '1', tone: 'sky', icon: Route, title: 'Plan the journey', body: 'Agree pickup places, order the stops and review the suggested roads with your school.'},
+  {n: '2', tone: 'mint', icon: ClipboardCheck, title: 'Record boarding', body: 'The school attendant confirms when each child boards and leaves the vehicle. Card readers can come later.'},
+  {n: '3', tone: 'sun', icon: MapPin, title: 'Review the journey', body: 'Planned routes, available live locations and staff confirmations sit together in one place.'},
+] as const;
 
 const pilot = [
   {icon: BusFront, title: 'Choose a vehicle', body: 'Check the vehicle hardware, connection and location reporting against a known place.'},
@@ -56,8 +61,8 @@ const faqs = [
 
 function Brand() {
   return (
-    <a className="rc-brand" href="/" aria-label="RideChime home">
-      <img className="rc-brand-mark" src="/ridechime-mark.svg" alt="" width={40} height={40} />
+    <a className="rc-brand" href="./" aria-label="RideChime home">
+      <img className="rc-brand-mark" src="ridechime-mark.svg" alt="" width={40} height={40} />
       <span className="rc-brand-text">
         <span className="rc-wordmark"><span className="rc-word-ride">Ride</span><span className="rc-word-chime">Chime</span></span>
         <span className="rc-brand-tag">School journeys, connected</span>
@@ -66,42 +71,107 @@ function Brand() {
   );
 }
 
-/* A calm product preview: an example route, live location and boarding register. Not live data. */
-function ProductPreview() {
+/* One child waiting at a stop: head, uniform, backpack strap. Example scene only. */
+function Child({x, y, skin, shirt}: {x: number; y: number; skin: string; shirt: string}) {
   return (
-    <figure className="rc-preview" aria-label="Example RideChime journey view">
-      <div className="rc-preview-bar">
-        <span className="rc-preview-title"><BusFront size={16} aria-hidden="true" />Morning route A · Van 01</span>
-        <span className="rc-pill rc-pill-live"><i aria-hidden="true" />In progress</span>
+    <g transform={`translate(${x} ${y})`}>
+      <rect x="-11" y="0" width="22" height="26" rx="9" fill={shirt} />
+      <rect x="-4" y="2" width="3" height="20" rx="1.5" fill="#1e1b4b" opacity=".25" />
+      <circle cx="0" cy="-9" r="9" fill={skin} />
+      <path d="M-9 -11a9 9 0 0 1 18 0c-3-3-6-4-9-4s-6 1-9 4z" fill="#1e1b4b" />
+      <rect x="-9" y="25" width="7" height="10" rx="3" fill="#1e1b4b" />
+      <rect x="2" y="25" width="7" height="10" rx="3" fill="#1e1b4b" />
+    </g>
+  );
+}
+
+/* Hero scene: a school bus on its morning route, children at stops, the school ahead. */
+function HeroScene() {
+  return (
+    <figure className="rc-scene" aria-label="Illustration of a RideChime school journey with example updates">
+      <svg viewBox="0 0 560 440" role="img" aria-hidden="true" focusable="false">
+        <rect width="560" height="440" rx="28" fill="var(--rc-sky-wash)" />
+        <circle cx="468" cy="78" r="40" fill="var(--rc-sun)" />
+        <circle cx="468" cy="78" r="56" fill="var(--rc-sun)" opacity=".18" />
+        <g fill="#fff" opacity=".9">
+          <rect x="62" y="58" width="96" height="26" rx="13" />
+          <rect x="92" y="44" width="48" height="26" rx="13" />
+          <rect x="300" y="96" width="74" height="20" rx="10" />
+        </g>
+        <path d="M0 300C120 252 236 270 330 250s170-48 230-40v202a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="var(--rc-hill)" />
+        <path d="M0 352c90-28 200-38 300-26s190 6 260-20v106a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="var(--rc-hill-2)" />
+        {/* road */}
+        <path d="M-10 378C90 352 150 320 250 312s190-14 250-70" fill="none" stroke="var(--rc-road)" strokeWidth="34" strokeLinecap="round" />
+        <path d="M-10 378C90 352 150 320 250 312s190-14 250-70" fill="none" stroke="#fff" strokeWidth="3" strokeDasharray="14 14" strokeLinecap="round" opacity=".8" />
+        {/* school */}
+        <g transform="translate(452 150)">
+          <rect x="0" y="40" width="88" height="66" rx="8" fill="#fff" />
+          <path d="M-8 44L44 8l52 36z" fill="var(--rc-purple)" />
+          <rect x="34" y="72" width="20" height="34" rx="4" fill="var(--rc-purple)" />
+          <rect x="10" y="56" width="16" height="14" rx="3" fill="var(--rc-sky-soft-2)" />
+          <rect x="62" y="56" width="16" height="14" rx="3" fill="var(--rc-sky-soft-2)" />
+          <path d="M44 8V-18" stroke="#1e1b4b" strokeWidth="3" strokeLinecap="round" />
+          <path d="M44 -18h22l-6 7 6 7H44z" fill="var(--rc-coral)" />
+        </g>
+        {/* stops with children */}
+        <g>
+          <circle cx="96" cy="345" r="9" fill="var(--rc-mint)" stroke="#fff" strokeWidth="3" />
+          <circle cx="334" cy="296" r="9" fill="#fff" stroke="var(--rc-purple)" strokeWidth="4" />
+          <Child x={330} y={228} skin="#8d5524" shirt="var(--rc-coral)" />
+          <Child x={362} y={232} skin="#c68642" shirt="var(--rc-sky)" />
+        </g>
+        {/* bus */}
+        <g transform="translate(150 236) rotate(-6)">
+          <path d="M8 4h96a14 14 0 0 1 13 9l11 28v28a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V12a8 8 0 0 1 8-8z" fill="var(--rc-sun)" />
+          <rect x="10" y="14" width="22" height="20" rx="4" fill="#2d2a63" />
+          <rect x="38" y="14" width="22" height="20" rx="4" fill="#2d2a63" />
+          <rect x="66" y="14" width="22" height="20" rx="4" fill="#2d2a63" />
+          <path d="M96 14h8a4 4 0 0 1 3.7 2.5l6 17.5H96z" fill="#2d2a63" />
+          <circle cx="21" cy="28" r="5" fill="#c68642" /><circle cx="49" cy="28" r="5" fill="#8d5524" /><circle cx="77" cy="28" r="5" fill="#e0ac69" />
+          <rect x="0" y="44" width="128" height="7" fill="var(--rc-sun-deep)" />
+          <rect x="118" y="54" width="8" height="6" rx="2" fill="#fff6d6" />
+          <circle cx="28" cy="76" r="12" fill="#1e1b4b" /><circle cx="28" cy="76" r="5" fill="#fff" />
+          <circle cx="100" cy="76" r="12" fill="#1e1b4b" /><circle cx="100" cy="76" r="5" fill="#fff" />
+          <path d="M92 -14c7 2 12 6 15 12" fill="none" stroke="var(--rc-purple)" strokeWidth="4" strokeLinecap="round" />
+          <path d="M98 -26c11 3 19 10 23 19" fill="none" stroke="var(--rc-purple)" strokeWidth="4" strokeLinecap="round" opacity=".5" />
+        </g>
+      </svg>
+      <div className="rc-float rc-float-board">
+        <span className="rc-float-icon mint"><CheckCircle2 size={18} aria-hidden="true" /></span>
+        <span><b>Child A boarded</b><small>Ntinda stop · 7:12</small></span>
       </div>
-      <div className="rc-preview-body">
-        <div className="rc-preview-map">
-          <svg viewBox="0 0 360 250" aria-hidden="true" focusable="false">
-            <g className="rc-map-grid">
-              {[40, 90, 140, 190].map((y) => <path key={y} d={`M0 ${y}H360`} />)}
-              {[60, 140, 220, 300].map((x) => <path key={x} d={`M${x} 0V250`} />)}
-            </g>
-            <path className="rc-map-road" d="M18 214C70 206 84 160 128 150s86 14 112-26 70-58 104-64" />
-            <path className="rc-map-route" d="M18 214C70 206 84 160 128 150s86 14 112-26 70-58 104-64" />
-            <circle className="rc-map-stop done" cx="40" cy="208" r="7" />
-            <circle className="rc-map-stop done" cx="128" cy="150" r="7" />
-            <circle className="rc-map-stop" cx="252" cy="108" r="7" />
-            <rect className="rc-map-school" x="330" y="46" width="20" height="20" rx="5" />
+      <div className="rc-float rc-float-live">
+        <span className="rc-float-icon sky"><MapPin size={18} aria-hidden="true" /></span>
+        <span><b>Van 01 · next stop Kisaasi</b><small>Location updated 1 min ago</small></span>
+      </div>
+      <figcaption>Illustration with example data. Not a live vehicle.</figcaption>
+    </figure>
+  );
+}
+
+/* What families will see once the school switches access on. Example data. */
+function FamilyPhone() {
+  return (
+    <figure className="rc-phone" aria-label="Example family view">
+      <div className="rc-phone-screen">
+        <div className="rc-phone-top"><img src="ridechime-mark.svg" alt="" width={26} height={26} /><b>Good morning, Grace</b></div>
+        <div className="rc-phone-child">
+          <span className="rc-avatar coral">A</span>
+          <span><b>Amara · P3</b><small>Morning route A</small></span>
+          <span className="rc-pill rc-pill-ok"><i aria-hidden="true" />Boarded</span>
+        </div>
+        <div className="rc-phone-map">
+          <svg viewBox="0 0 240 120" aria-hidden="true" focusable="false">
+            <path d="M10 100C60 90 70 50 120 52s80-30 110-40" fill="none" stroke="var(--rc-line-strong)" strokeWidth="12" strokeLinecap="round" />
+            <path d="M10 100C60 90 70 50 120 52" fill="none" stroke="var(--rc-purple)" strokeWidth="5" strokeLinecap="round" />
+            <circle cx="120" cy="52" r="11" fill="var(--rc-sun)" stroke="#fff" strokeWidth="3" />
+            <rect x="218" y="4" width="16" height="16" rx="4" fill="var(--rc-purple)" />
           </svg>
-          <span className="rc-map-vehicle" style={{left: '53%', top: '50%'}}><BusFront size={15} aria-hidden="true" /></span>
-          <span className="rc-map-chip" style={{left: '53%', top: '50%'}}><Clock3 size={13} aria-hidden="true" />Updated 2 min ago</span>
         </div>
-        <div className="rc-preview-side">
-          <p className="rc-preview-label">Boarding register</p>
-          <ul className="rc-register">
-            <li><span>Child A</span><span className="rc-pill rc-pill-ok"><i aria-hidden="true" />Boarded</span></li>
-            <li><span>Child B</span><span className="rc-pill rc-pill-ok"><i aria-hidden="true" />Boarded</span></li>
-            <li><span>Child C</span><span className="rc-pill rc-pill-wait"><i aria-hidden="true" />Next stop</span></li>
-          </ul>
-          <p className="rc-preview-note"><ShieldCheck size={14} aria-hidden="true" />Confirmed by the school attendant</p>
-        </div>
+        <p className="rc-phone-row"><Clock3 size={15} aria-hidden="true" />Van 01 · updated 1 min ago</p>
+        <p className="rc-phone-row notice"><BellRing size={15} aria-hidden="true" />School: Friday pickup starts 10 minutes earlier.</p>
       </div>
-      <figcaption>Illustrative view with example data. Not a live vehicle.</figcaption>
+      <figcaption>Family view in preparation. Example data.</figcaption>
     </figure>
   );
 }
@@ -117,14 +187,14 @@ export default function RideChimeHome() {
             {nav.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
           </nav>
           <div className="rc-header-actions">
-            <a className="rc-link-quiet" href={signIn}>Platform sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
+            <a className="rc-link-quiet" href={signIn}>Sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
             <a className="rc-button rc-button-primary rc-button-compact" href="#demo">Book a demo</a>
           </div>
           <details className="rc-menu">
             <summary aria-label="Open navigation">Menu</summary>
             <nav aria-label="Mobile navigation">
               {nav.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
-              <a href={signIn}>Platform sign in</a>
+              <a href={signIn}>Sign in</a>
               <a className="rc-button rc-button-primary" href="#demo">Book a school demo</a>
             </nav>
           </details>
@@ -135,28 +205,53 @@ export default function RideChimeHome() {
         <section className="rc-hero">
           <div className="rc-container rc-hero-grid">
             <div className="rc-hero-copy">
-              <p className="rc-eyebrow">School transport · Kampala, Uganda</p>
-              <h1>Live locations and boarding records for every school journey.</h1>
-              <p className="rc-lead">RideChime brings pickup routes, vehicle live locations and staff-confirmed boarding into one place for vans, minibuses, cars and buses. Explore our supervised pilot for schools and transport operators.</p>
+              <p className="rc-badge"><span aria-hidden="true" />Now inviting schools in Kampala</p>
+              <h1>Every school ride, <span className="rc-hl">in sight and on record</span>.</h1>
+              <p className="rc-lead">Live locations, staff-confirmed boarding and calm updates for schools, transport teams and families. RideChime works with the vans, minibuses and buses you already run.</p>
               <div className="rc-hero-actions">
                 <a className="rc-button rc-button-primary" href="#demo">Book a school demo<ArrowRight size={18} aria-hidden="true" /></a>
                 <a className="rc-button rc-button-secondary" href={chat}><MessageCircle size={18} aria-hidden="true" />Chat on WhatsApp</a>
               </div>
-              <p className="rc-pilot-note"><span aria-hidden="true" />Now inviting schools for a supervised pilot.</p>
+              <ul className="rc-hero-points">
+                <li><span className="dot sky" aria-hidden="true" />Live locations</li>
+                <li><span className="dot mint" aria-hidden="true" />Boarding records</li>
+                <li><span className="dot coral" aria-hidden="true" />Private to each school</li>
+              </ul>
             </div>
-            <ProductPreview />
+            <HeroScene />
           </div>
         </section>
 
-        <section className="rc-strip" aria-label="What RideChime covers">
-          <div className="rc-container rc-strip-grid">
-            <p><MapPin size={18} aria-hidden="true" /><span><b>Live locations</b>See where the school vehicle last reported, and how recently.</span></p>
-            <p><ClipboardCheck size={18} aria-hidden="true" /><span><b>Staff-confirmed boarding</b>Attendants record who boarded and who got off.</span></p>
-            <p><LockKeyhole size={18} aria-hidden="true" /><span><b>Invitation-only access</b>Each school’s records stay in its own private workspace.</span></p>
+        <section className="rc-section" id="everyone">
+          <div className="rc-container">
+            <div className="rc-section-head rc-center">
+              <p className="rc-eyebrow">Made for everyone on the school run</p>
+              <h2>One journey. Three people who care about it.</h2>
+            </div>
+            <div className="rc-people">
+              <article className="rc-person purple">
+                <span className="rc-person-icon"><GraduationCap size={26} aria-hidden="true" /></span>
+                <h3>Teachers and school staff</h3>
+                <p>See which vehicle is where, who has boarded and what still needs a check, without phone calls to the driver.</p>
+                <ul><li><Check size={16} aria-hidden="true" />Boarding register in one tap</li><li><Check size={16} aria-hidden="true" />Routes and stops in one place</li><li><Check size={16} aria-hidden="true" />Empty-vehicle check at the end</li></ul>
+              </article>
+              <article className="rc-person coral">
+                <span className="rc-person-icon"><Heart size={26} aria-hidden="true" /></span>
+                <h3>Parents and guardians</h3>
+                <p>Know when your child is on board and how recently the vehicle reported its location. Only your own children are shown.</p>
+                <ul><li><Check size={16} aria-hidden="true" />Boarded and dropped-off records</li><li><Check size={16} aria-hidden="true" />Live location during the ride</li><li><Check size={16} aria-hidden="true" />Notices from the school</li></ul>
+              </article>
+              <article className="rc-person sun">
+                <span className="rc-person-icon"><Backpack size={26} aria-hidden="true" /></span>
+                <h3>Children</h3>
+                <p>A calmer ride. The attendant knows who should be aboard at every stop, and the right grown-up is expected at drop-off.</p>
+                <ul><li><Check size={16} aria-hidden="true" />Counted on and off the vehicle</li><li><Check size={16} aria-hidden="true" />Familiar stops and times</li><li><Check size={16} aria-hidden="true" />No app or phone needed</li></ul>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section className="rc-section" id="how-it-works">
+        <section className="rc-section rc-section-soft" id="how-it-works">
           <div className="rc-container">
             <div className="rc-section-head">
               <p className="rc-eyebrow">How it works</p>
@@ -164,9 +259,9 @@ export default function RideChimeHome() {
               <p>A useful record starts with a plan and the people who confirm what happens.</p>
             </div>
             <ol className="rc-steps">
-              {steps.map(({n, icon: Icon, title, body}) => (
-                <li key={n} className="rc-card">
-                  <span className="rc-step-top"><span className="rc-step-n">{n}</span><Icon size={20} aria-hidden="true" /></span>
+              {steps.map(({n, tone, icon: Icon, title, body}) => (
+                <li key={n} className={`rc-card rc-step ${tone}`}>
+                  <span className="rc-step-top"><span className="rc-step-icon"><Icon size={22} aria-hidden="true" /></span><span className="rc-step-n">Step {n}</span></span>
                   <h3>{title}</h3>
                   <p>{body}</p>
                 </li>
@@ -175,7 +270,23 @@ export default function RideChimeHome() {
           </div>
         </section>
 
-        <section className="rc-section rc-section-navy" id="schools">
+        <section className="rc-section" id="families">
+          <div className="rc-container rc-split">
+            <div>
+              <p className="rc-eyebrow coral">For families</p>
+              <h2>The morning message every parent wants.</h2>
+              <p>When the school switches family access on, parents see their own child’s boarding record and the vehicle’s latest location, with the time it was last updated.</p>
+              <p>We start with the school team, test the journey together, and only then invite families.</p>
+              <div className="rc-callout">
+                <Clock3 size={20} aria-hidden="true" />
+                <p><b>A timestamp matters.</b> A saved location is not always a current location, so RideChime always shows when the vehicle last reported.</p>
+              </div>
+            </div>
+            <FamilyPhone />
+          </div>
+        </section>
+
+        <section className="rc-section rc-section-ink" id="schools">
           <div className="rc-container">
             <div className="rc-section-head rc-section-head-light">
               <p className="rc-eyebrow">Schools and transport operators</p>
@@ -184,7 +295,7 @@ export default function RideChimeHome() {
             </div>
             <div className="rc-audience">
               <article className="rc-audience-card">
-                <School size={22} aria-hidden="true" />
+                <span className="rc-audience-icon"><School size={22} aria-hidden="true" /></span>
                 <h3>For schools</h3>
                 <p>Plan pickup routes, review available live locations and record boarding. Your transport details stay in one shared view for your team.</p>
                 <ul className="rc-checks">
@@ -195,7 +306,7 @@ export default function RideChimeHome() {
                 </ul>
               </article>
               <article className="rc-audience-card">
-                <Building2 size={22} aria-hidden="true" />
+                <span className="rc-audience-icon"><Building2 size={22} aria-hidden="true" /></span>
                 <h3>For transport operators</h3>
                 <p>Run vehicles for one school or several. Each school you serve is set up in its own private workspace, agreed with that school.</p>
                 <ul className="rc-checks">
@@ -206,29 +317,15 @@ export default function RideChimeHome() {
                 </ul>
               </article>
             </div>
-            <a className="rc-text-link rc-text-link-light" href="#demo">Talk to us about your school run<ArrowRight size={16} aria-hidden="true" /></a>
-          </div>
-        </section>
-
-        <section className="rc-section" id="families">
-          <div className="rc-container rc-split">
-            <div>
-              <p className="rc-eyebrow">Families</p>
-              <h2>Start with the school. Prepare for parents.</h2>
-              <p>The pilot starts with the school team: the route, the vehicle and the people recording boarding and handover.</p>
-              <p>Before families join, we agree access and updates with the school and test the journey together. Clear information should come with a clear explanation of what it means.</p>
+            <div className="rc-trust">
+              <p><LockKeyhole size={18} aria-hidden="true" />Invitation-only access</p>
+              <p><ShieldCheck size={18} aria-hidden="true" />Each school’s records kept private</p>
+              <p><ClipboardCheck size={18} aria-hidden="true" />Boarding confirmed by people, not guessed</p>
             </div>
-            <aside className="rc-card rc-callout">
-              <Clock3 size={20} aria-hidden="true" />
-              <div>
-                <h3>A timestamp matters.</h3>
-                <p>A saved location is not always a current location. RideChime’s live view shows when the vehicle last reported its location.</p>
-              </div>
-            </aside>
           </div>
         </section>
 
-        <section className="rc-section rc-section-tint">
+        <section className="rc-section">
           <div className="rc-container">
             <div className="rc-section-head">
               <p className="rc-eyebrow">The pilot</p>
@@ -236,15 +333,15 @@ export default function RideChimeHome() {
               <p>A practical start, with the scope agreed before the first supervised journey.</p>
             </div>
             <ol className="rc-pilot">
-              {pilot.map(({icon: Icon, title, body}) => (
-                <li key={title} className="rc-card"><Icon size={20} aria-hidden="true" /><h3>{title}</h3><p>{body}</p></li>
+              {pilot.map(({icon: Icon, title, body}, i) => (
+                <li key={title} className="rc-card"><span className="rc-pilot-top"><span className="rc-pilot-icon"><Icon size={20} aria-hidden="true" /></span><span className="rc-pilot-n">{i + 1}</span></span><h3>{title}</h3><p>{body}</p></li>
               ))}
             </ol>
             <p className="rc-footnote"><ShieldCheck size={16} aria-hidden="true" />Optional card readers and notification channels are scoped separately. We explain what is ready before you commit.</p>
           </div>
         </section>
 
-        <section className="rc-section" id="questions">
+        <section className="rc-section rc-section-soft" id="questions">
           <div className="rc-container rc-faq-wrap">
             <div className="rc-section-head">
               <p className="rc-eyebrow">Questions</p>
@@ -263,7 +360,7 @@ export default function RideChimeHome() {
           </div>
         </section>
 
-        <section className="rc-section rc-section-navy rc-demo" id="demo">
+        <section className="rc-section rc-demo" id="demo">
           <div className="rc-container rc-demo-grid">
             <div>
               <p className="rc-eyebrow">Book a school demo</p>
@@ -280,7 +377,7 @@ export default function RideChimeHome() {
         <div className="rc-container rc-footer-inner">
           <Brand />
           <p>School transport pilot · Kampala, Uganda</p>
-          <a className="rc-link-quiet" href={signIn}>Platform sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
+          <a className="rc-link-quiet" href={signIn}>Sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
         </div>
         <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime</span></div>
       </footer>
