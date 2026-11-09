@@ -1,7 +1,289 @@
-import {ArrowRight,ArrowUpRight,BusFront,Check,CheckCheck,ChevronDown,ClipboardCheck,Heart,MapPin,MessageCircle,Route,ShieldCheck,Users,Phone,Clock3} from 'lucide-react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BusFront,
+  Check,
+  ClipboardCheck,
+  Clock3,
+  Building2,
+  LockKeyhole,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Route,
+  School,
+  ShieldCheck,
+  Users,
+} from 'lucide-react';
 import RideChimeDemo from './ridechime-demo';
-const chat='https://wa.me/256703664233?text=Hello%20RideChime%2C%20I%20would%20like%20to%20learn%20about%20the%20RideChime%20school%20pilot.';
-function Brand(){return <a className="ridechime-brand" href="/" aria-label="RideChime home"><span className="ridechime-brand-mark"><img src="/ridechime-mark.svg" alt="" /></span><span><b><span className="ridechime-word-ride">Ride</span><span className="ridechime-word-chime">Chime</span></b><small>SCHOOL JOURNEYS, CONNECTED</small></span></a>}
-function JourneyArt(){return <div className="ridechime-art"><span className="ridechime-art-caption">A SCHOOL JOURNEY, ILLUSTRATED</span><svg viewBox="0 0 740 610" role="img" aria-label="Illustration of a yellow school van following a route between home and school"><defs><pattern id="ridechime-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#d5d9d7"/></pattern><filter id="ridechime-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="13" stdDeviation="12" floodColor="#0b2545" floodOpacity=".1"/></filter></defs><rect x="34" y="24" width="660" height="560" rx="160" fill="#f3eedf"/><rect x="60" y="42" width="614" height="513" fill="url(#ridechime-dots)"/><circle cx="580" cy="145" r="65" fill="#f5c542"/><path d="M70 470C90 320 236 540 328 430S438 269 597 328" fill="none" stroke="#d0d7cd" strokeWidth="70"/><path d="M70 470C90 320 236 540 328 430S438 269 597 328" fill="none" stroke="#fff" strokeWidth="55"/><path d="M70 470C90 320 236 540 328 430S438 269 597 328" fill="none" stroke="#0b2545" strokeWidth="3" strokeDasharray="7 9"/><g transform="translate(477 177)"><path d="M0 38L90 0l90 38v112H0z" fill="#fff" stroke="#0b2545" strokeWidth="3"/><path d="M-8 42L90 0l98 42" fill="none" stroke="#0b2545" strokeWidth="6" strokeLinejoin="round"/><rect x="66" y="89" width="48" height="61" fill="#c3d5c2" stroke="#0b2545" strokeWidth="3"/><path d="M17 69h28v28H17zm118 0h28v28h-28z" fill="#c5dbe3" stroke="#0b2545" strokeWidth="3"/><path d="M90 0v-47m0 0h48v24H90" stroke="#0b2545" strokeWidth="3" fill="#f5c542"/><text x="90" y="65" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="13" fill="#0b2545">SCHOOL</text></g><g transform="translate(72 110)"><path d="M0 56L61 3l61 53v106H0z" fill="#d8e1d0"/><path d="M-7 59L61 3l69 56" fill="none" stroke="#0b2545" strokeWidth="4" strokeLinejoin="round"/><path d="M49 112h29v50H49z" fill="#fff"/><path d="M18 77h22v23H18zm64 0h22v23H82z" fill="#fff"/></g><g fill="#a7bfa6"><circle cx="651" cy="425" r="29"/><circle cx="630" cy="447" r="24"/><circle cx="129" cy="327" r="26"/></g><g stroke="#0b2545" strokeWidth="3"><path d="M649 433v70m-3-41l-16-15M128 328v47"/></g><g transform="translate(165 279) rotate(-5 160 85)" filter="url(#ridechime-shadow)"><path d="M7 43Q7 17 34 17h195q20 0 33 17l47 60q8 10 8 28v34H7z" fill="#f5c542" stroke="#0b2545" strokeWidth="4"/><path d="M232 33l47 61h-47z" fill="#c8dfe4" stroke="#0b2545" strokeWidth="4"/><rect x="25" y="37" width="53" height="54" rx="7" fill="#c8dfe4" stroke="#0b2545" strokeWidth="4"/><rect x="89" y="37" width="53" height="54" rx="7" fill="#c8dfe4" stroke="#0b2545" strokeWidth="4"/><rect x="153" y="37" width="53" height="54" rx="7" fill="#c8dfe4" stroke="#0b2545" strokeWidth="4"/><path d="M7 132h310" stroke="#0b2545" strokeWidth="6"/><rect x="271" y="116" width="32" height="12" rx="4" fill="#fff6d7"/><path d="M228 102v46m12-40h12" stroke="#0b2545" strokeWidth="3"/><circle cx="65" cy="157" r="28" fill="#0b2545"/><circle cx="65" cy="157" r="12" fill="#fff"/><circle cx="263" cy="157" r="28" fill="#0b2545"/><circle cx="263" cy="157" r="12" fill="#fff"/><text x="118" y="116" textAnchor="middle" fill="#0b2545" fontSize="15" fontWeight="700" fontFamily="Arial,sans-serif">RideChime</text><path d="M14 28h191" stroke="#ffe392" strokeWidth="5" strokeLinecap="round"/></g><g transform="translate(91 470)"><circle r="17" fill="#f5c542" stroke="#0b2545" strokeWidth="3"/><circle r="4" fill="#0b2545"/></g><g transform="translate(594 326)"><circle r="17" fill="#c5d7c2" stroke="#0b2545" strokeWidth="3"/><path d="M-6 0l4 5 9-11" stroke="#0b2545" strokeWidth="3" fill="none" strokeLinecap="round"/></g><path d="M495 472c-13 16-21 24-37 30m29-5l-29 5 7-27" fill="none" stroke="#0b2545" strokeWidth="2.5" strokeLinecap="round"/></svg><div className="ridechime-art-record"><span><ClipboardCheck size={22}/></span><div><b>Boarding recorded</b><small>Confirmed by the school attendant</small></div><CheckCheck size={19}/></div><div className="ridechime-art-note"><span>Less wondering.</span><br/>More clarity.<Heart size={20}/></div><div className="ridechime-art-tag"><MapPin size={15}/>Home → school → home</div></div>}
-const faqs=[['What is RideChime?','RideChime is a school transport live-location platform being piloted in Kampala, Uganda. It brings planned pickup routes, available live locations and staff-confirmed boarding records together for the school team. Family access and notification delivery are being prepared before rollout.'],['Can RideChime show live locations for our 14-seater school van?','The pilot can be configured around a 14-seater van, minibus, car or bus used for school transport. We first verify its installed vehicle hardware and location reporting, then agree the pickup route and responsible staff with your school.'],['How can parents see a school vehicle’s live location in Kampala?','Parent access is being prepared for the RideChime pilot. Before families join, we need to verify reliable vehicle updates and each family’s permissions. The school will arrange access when these checks are complete.'],['Can a vehicle’s live location confirm when a child boards or gets off?','A vehicle’s reported live location shows where it was when it sent its latest update; it does not prove that a child boarded or got off. RideChime’s pilot uses staff-confirmed boarding records. Compatible RFID card readers are an optional upgrade that needs separate installation and testing.'],['Can our school try RideChime?','Yes. Book a demonstration to discuss a supervised pilot. We agree the vehicle, route, staff responsibilities and checks with your school before any family rollout.'],['Do parents need to download an app?','The pilot starts with the school team. Parent browser access and mobile apps are being prepared; family access will be arranged with the school when ready. No public self-registration is offered.'],['Does every child need a tap-on card?','No. The pilot starts with staff-confirmed boarding records. Card readers are an optional upgrade, subject to compatible equipment, child-to-card mapping and testing.'],['Are automatic WhatsApp updates included?','WhatsApp is our contact channel for enquiries and demos. Automated parent alerts are not included in the current pilot. Notification channels, including optional SMS, will be agreed before rollout.'],['Will we see an exact arrival time?','Route planning can provide an estimated driving duration. It does not include pickup waits or live traffic. The pilot uses agreed pickup schedules and shows how recently the vehicle sent its last location update.'],['How will you handle children’s information?','The pilot’s data purpose, authorised people, retention and responsibilities must be agreed with the school before real family use. A privacy notice and the applicable parent or guardian permissions form part of that preparation.']];
-export default function RideChimeHome(){return <div className="ridechime-site"><a className="ridechime-skip" href="#main">Skip to content</a><header className="ridechime-header"><div className="ridechime-header-inner"><Brand/><nav className="ridechime-desktop-nav" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#schools">For schools</a><a href="#families">For families</a><a href="#questions">Questions</a></nav><div className="ridechime-header-actions"><a className="ridechime-login" href="https://app.ridechime.com/login">Platform sign in<ArrowUpRight size={14}/></a><a className="ridechime-button ridechime-button-navy" href="#demo">Book a demo<ArrowUpRight size={16}/></a></div><details className="ridechime-mobile-nav"><summary aria-label="Open navigation">Menu<ChevronDown size={17}/></summary><nav aria-label="Mobile navigation"><a href="#how-it-works">How it works</a><a href="#schools">For schools</a><a href="#families">For families</a><a href="#questions">Questions</a><a href="https://app.ridechime.com/login">Platform sign in</a><a href="#demo">Book a school demo</a></nav></details></div></header><main id="main"><section className="ridechime-hero ridechime-wrap"><div className="ridechime-hero-copy"><p className="ridechime-eyebrow"><span/>SCHOOL TRANSPORT LIVE LOCATIONS IN UGANDA</p><h1>School transport<br/>live locations.<br/><em>Parents in the loop.</em></h1><p className="ridechime-hero-sub">Live vehicle locations, pickup routes and boarding records in one place. RideChime connects the school journey—for vans, minibuses, cars and buses. Explore our supervised pilot in Kampala, Uganda.</p><div className="ridechime-hero-actions"><a className="ridechime-button ridechime-button-yellow" href="#demo">Book a school demo<ArrowUpRight size={19}/></a><a className="ridechime-text-link" href={chat} target="_blank" rel="noreferrer"><MessageCircle size={18}/>Chat on WhatsApp</a></div><p className="ridechime-pilot-note"><span/>Now inviting schools for a supervised pilot.</p></div><JourneyArt/></section><section className="ridechime-ribbon" aria-label="RideChime focus"><div className="ridechime-wrap"><span><Route size={22}/>A route everyone understands</span><span><ClipboardCheck size={22}/>Boarding recorded by staff</span><span><Users size={22}/>A school team in the loop</span></div></section><section id="how-it-works" className="ridechime-section ridechime-wrap"><div className="ridechime-section-heading"><div><p className="ridechime-eyebrow">SMALL STEPS. A CLEARER PICTURE.</p><h2>The school run,<br/>brought together.</h2></div><p>A useful record starts with a plan and the people who confirm what happens.</p></div><div className="ridechime-steps">{[{n:'01',Icon:Route,title:'Plan the journey.',body:'Agree pickup places, order the stops and review the suggested roads with your school.'},{n:'02',Icon:ClipboardCheck,title:'Record the boarding.',body:'The school attendant confirms boarding and leaving the vehicle. Card-reader integration can come later.'},{n:'03',Icon:CheckCheck,title:'Review the details.',body:'Bring the journey, available live location updates and staff confirmations into one place.'}].map(x=><article key={x.n}><div className="ridechime-step-top"><span>{x.n}</span><x.Icon size={27}/></div><h3>{x.title}</h3><p>{x.body}</p></article>)}</div></section><section id="schools" className="ridechime-school-section"><div className="ridechime-wrap ridechime-school-grid"><div><p className="ridechime-eyebrow">FOR THE PEOPLE RUNNING THE SCHOOL RUN</p><h2>School transport management.<br/>One shared view.</h2><p className="ridechime-school-intro">Plan school pickup routes, review available live locations and record boarding in one place. RideChime brings the school team’s transport details together.</p><ul>{['Plan routes and pickup places','Record who boarded and got off','Keep a clear correction history','Confirm the physical empty-vehicle check'].map(x=><li key={x}><Check size={17}/>{x}</li>)}</ul><a href="#demo" className="ridechime-text-link">Let’s walk through your school run<ArrowRight size={18}/></a></div><div className="ridechime-school-preview"><div className="ridechime-preview-head"><span><BusFront size={18}/>School journey</span><span className="ridechime-outline-badge">Illustrative view</span></div><div className="ridechime-preview-title"><div><small>YOUR TRANSPORT TEAM</small><h3>Ready for the school run.</h3></div><Route size={29}/></div><div className="ridechime-mini-route"><div><span>1</span><p>Pickup place<small>Route planned</small></p></div><i/><div><span>2</span><p>School gate<small>Handover to confirm</small></p></div></div><div className="ridechime-preview-row"><span><ClipboardCheck size={20}/><b>Boarding register</b></span><span>Staff confirmed</span></div><div className="ridechime-preview-row"><span><ShieldCheck size={20}/><b>Empty-vehicle check</b></span><span>Staff confirmation required</span></div><p className="ridechime-preview-caption">Example interface. Not a live vehicle or a completed journey.</p></div></div></section><section id="families" className="ridechime-section ridechime-wrap ridechime-family-grid"><div className="ridechime-family-art"><div className="ridechime-family-circle"><Heart size={96} strokeWidth={1.2}/><span className="ridechime-family-pin"><MapPin size={27}/></span><span className="ridechime-family-bus"><BusFront size={30}/></span></div><p>Every child has<br/><b>someone waiting.</b></p><span className="ridechime-family-stroke"/></div><div className="ridechime-family-copy"><p className="ridechime-eyebrow">BUILT AROUND FAMILIES</p><h2>Start with the school.<br/>Keep parents in mind.</h2><p>The pilot starts with the school team: the route, the vehicle and the people recording boarding and handover.</p><p>Before families join, we agree access and updates with the school and test the journey together. Clear information should come with a clear explanation of what it means.</p><div className="ridechime-parent-principle"><Clock3 size={23}/><div><b>A timestamp matters.</b><p>A saved location is not always a current location. RideChime’s test view shows when the vehicle last reported its location.</p></div></div></div></section><section className="ridechime-pilot-section" id="pilot"><div className="ridechime-wrap"><div className="ridechime-section-heading"><div><p className="ridechime-eyebrow">START SMALL. CHECK THE DETAILS.</p><h2>Your school. Your pilot.</h2></div><p>A practical start, with the scope agreed before the first supervised journey.</p></div><div className="ridechime-pilot-grid"><article><span className="ridechime-round-icon"><BusFront size={27}/></span><h3>Choose a vehicle</h3><p>Check the vehicle hardware, connection and location reporting against a known place.</p></article><article><span className="ridechime-round-icon"><MapPin size={27}/></span><h3>Agree the route</h3><p>Confirm pickup places, timings and road suitability with the school.</p></article><article><span className="ridechime-round-icon"><Users size={27}/></span><h3>Bring the team</h3><p>Name the people responsible for attendance, handover and exceptions.</p></article><article><span className="ridechime-round-icon"><CheckCheck size={27}/></span><h3>Review together</h3><p>Test a supervised journey and agree the next steps before family rollout.</p></article></div><div className="ridechime-pilot-foot"><ShieldCheck size={22}/><p>Optional card readers and notification channels are scoped separately. We explain what is ready before you commit.</p></div></div></section><section className="ridechime-faq-section" id="questions"><div className="ridechime-faq-intro"><div><p className="ridechime-eyebrow">BEFORE YOUR SCHOOL BEGINS</p><h2>The details, made clear.</h2></div><div className="ridechime-faq-intro-side"><p>Answers on vehicle compatibility, family access and what RideChime can confirm during a supervised pilot.</p><a className="ridechime-text-link" href={chat} target="_blank" rel="noreferrer">Talk with our team<ArrowUpRight size={16}/></a></div></div><div className="ridechime-faqs">{[faqs.slice(0,5),faqs.slice(5)].map((column,columnIndex)=><div className="ridechime-faq-column" key={columnIndex}>{column.map(([q,a])=><details key={q}><summary><span className="ridechime-faq-question">{q}</span><span className="ridechime-faq-toggle" aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div>)}</div></section><section className="ridechime-demo-section" id="demo"><div className="ridechime-wrap ridechime-demo-grid"><div><p className="ridechime-eyebrow">LET’S START WITH A CONVERSATION</p><h2>A clearer school run<br/>starts right here.</h2><p>Tell us about your school. We’ll walk you through RideChime and discuss a supervised pilot that fits your transport setup.</p><a className="ridechime-contact" href="tel:+256703664233"><Phone size={21}/><span><small>CALL OR WHATSAPP</small><b>0703 664 233</b></span><ArrowUpRight size={20}/></a></div><RideChimeDemo/></div></section></main><footer className="ridechime-footer ridechime-wrap"><div className="ridechime-footer-top"><Brand/><p>Every school ride, connected.</p><a href="https://app.ridechime.com/login">Platform sign in<ArrowUpRight size={15}/></a></div><div className="ridechime-footer-bottom"><span>© {new Date().getFullYear()} RideChime</span><span>School transport pilot · Kampala, Uganda</span></div></footer></div>}
+
+const chat =
+  'https://wa.me/256703664233?text=Hello%20RideChime%2C%20I%20would%20like%20to%20learn%20about%20the%20RideChime%20school%20pilot.';
+const signIn = 'https://app.ridechime.com/login';
+
+const nav = [
+  ['#how-it-works', 'How it works'],
+  ['#schools', 'Schools & operators'],
+  ['#families', 'Families'],
+  ['#questions', 'Questions'],
+] as const;
+
+const steps = [
+  {n: '01', icon: Route, title: 'Plan the journey', body: 'Agree pickup places, order the stops and review the suggested roads with your school.'},
+  {n: '02', icon: ClipboardCheck, title: 'Record boarding', body: 'The school attendant confirms when each child boards and leaves the vehicle. Card readers can come later.'},
+  {n: '03', icon: MapPin, title: 'Review the journey', body: 'Planned routes, available live locations and staff confirmations sit together in one place.'},
+];
+
+const pilot = [
+  {icon: BusFront, title: 'Choose a vehicle', body: 'Check the vehicle hardware, connection and location reporting against a known place.'},
+  {icon: Route, title: 'Agree the route', body: 'Confirm pickup places, timings and road suitability with the school.'},
+  {icon: Users, title: 'Bring the team', body: 'Name the people responsible for attendance, handover and exceptions.'},
+  {icon: Check, title: 'Review together', body: 'Test a supervised journey and agree the next steps before family rollout.'},
+];
+
+const faqs = [
+  ['What is RideChime?', 'RideChime is a school transport live-location platform being piloted in Kampala, Uganda. It brings planned pickup routes, available live locations and staff-confirmed boarding records together for the school team. Family access and notification delivery are being prepared before rollout.'],
+  ['Can RideChime show live locations for our 14-seater school van?', 'The pilot can be configured around a 14-seater van, minibus, car or bus used for school transport. We first verify its installed vehicle hardware and location reporting, then agree the pickup route and responsible staff with your school.'],
+  ['Can transport operators use RideChime?', 'Yes. RideChime is a standalone service. A transport operator that runs vehicles for schools can bring each school onto RideChime, and every school keeps its own private workspace. Arrangements are agreed with each school before any records are added.'],
+  ['How can parents see a school vehicle’s live location?', 'Parent access is being prepared for the RideChime pilot. Before families join, we need to verify reliable vehicle updates and each family’s permissions. The school will arrange access when these checks are complete.'],
+  ['Can a vehicle’s live location confirm when a child boards or gets off?', 'A vehicle’s reported live location shows where it was when it sent its latest update; it does not prove that a child boarded or got off. RideChime’s pilot uses staff-confirmed boarding records. Compatible RFID card readers are an optional upgrade that needs separate installation and testing.'],
+  ['Do parents need to download an app?', 'The pilot starts with the school team. Parent browser access and mobile apps are being prepared; family access will be arranged with the school when ready. No public self-registration is offered.'],
+  ['Does every child need a tap-on card?', 'No. The pilot starts with staff-confirmed boarding records. Card readers are an optional upgrade, subject to compatible equipment, child-to-card mapping and testing.'],
+  ['Are automatic WhatsApp updates included?', 'WhatsApp is our contact channel for enquiries and demos. Automated parent alerts are not included in the current pilot. Notification channels, including optional SMS, will be agreed before rollout.'],
+  ['Will we see an exact arrival time?', 'Route planning can provide an estimated driving duration. It does not include pickup waits or live traffic. The pilot uses agreed pickup schedules and shows how recently the vehicle sent its last location update.'],
+  ['How will you handle children’s information?', 'The pilot’s data purpose, authorised people, retention and responsibilities must be agreed with the school before real family use. A privacy notice and the applicable parent or guardian permissions form part of that preparation.'],
+] as const;
+
+function Brand() {
+  return (
+    <a className="rc-brand" href="/" aria-label="RideChime home">
+      <img className="rc-brand-mark" src="/ridechime-mark.svg" alt="" width={40} height={40} />
+      <span className="rc-brand-text">
+        <span className="rc-wordmark"><span className="rc-word-ride">Ride</span><span className="rc-word-chime">Chime</span></span>
+        <span className="rc-brand-tag">School journeys, connected</span>
+      </span>
+    </a>
+  );
+}
+
+/* A calm product preview: an example route, live location and boarding register. Not live data. */
+function ProductPreview() {
+  return (
+    <figure className="rc-preview" aria-label="Example RideChime journey view">
+      <div className="rc-preview-bar">
+        <span className="rc-preview-title"><BusFront size={16} aria-hidden="true" />Morning route A · Van 01</span>
+        <span className="rc-pill rc-pill-live"><i aria-hidden="true" />In progress</span>
+      </div>
+      <div className="rc-preview-body">
+        <div className="rc-preview-map">
+          <svg viewBox="0 0 360 250" aria-hidden="true" focusable="false">
+            <g className="rc-map-grid">
+              {[40, 90, 140, 190].map((y) => <path key={y} d={`M0 ${y}H360`} />)}
+              {[60, 140, 220, 300].map((x) => <path key={x} d={`M${x} 0V250`} />)}
+            </g>
+            <path className="rc-map-road" d="M18 214C70 206 84 160 128 150s86 14 112-26 70-58 104-64" />
+            <path className="rc-map-route" d="M18 214C70 206 84 160 128 150s86 14 112-26 70-58 104-64" />
+            <circle className="rc-map-stop done" cx="40" cy="208" r="7" />
+            <circle className="rc-map-stop done" cx="128" cy="150" r="7" />
+            <circle className="rc-map-stop" cx="252" cy="108" r="7" />
+            <rect className="rc-map-school" x="330" y="46" width="20" height="20" rx="5" />
+          </svg>
+          <span className="rc-map-vehicle" style={{left: '53%', top: '50%'}}><BusFront size={15} aria-hidden="true" /></span>
+          <span className="rc-map-chip" style={{left: '53%', top: '50%'}}><Clock3 size={13} aria-hidden="true" />Updated 2 min ago</span>
+        </div>
+        <div className="rc-preview-side">
+          <p className="rc-preview-label">Boarding register</p>
+          <ul className="rc-register">
+            <li><span>Child A</span><span className="rc-pill rc-pill-ok"><i aria-hidden="true" />Boarded</span></li>
+            <li><span>Child B</span><span className="rc-pill rc-pill-ok"><i aria-hidden="true" />Boarded</span></li>
+            <li><span>Child C</span><span className="rc-pill rc-pill-wait"><i aria-hidden="true" />Next stop</span></li>
+          </ul>
+          <p className="rc-preview-note"><ShieldCheck size={14} aria-hidden="true" />Confirmed by the school attendant</p>
+        </div>
+      </div>
+      <figcaption>Illustrative view with example data. Not a live vehicle.</figcaption>
+    </figure>
+  );
+}
+
+export default function RideChimeHome() {
+  return (
+    <div className="rc-site">
+      <a className="rc-skip" href="#main">Skip to content</a>
+      <header className="rc-header">
+        <div className="rc-container rc-header-inner">
+          <Brand />
+          <nav className="rc-nav" aria-label="Main navigation">
+            {nav.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
+          </nav>
+          <div className="rc-header-actions">
+            <a className="rc-link-quiet" href={signIn}>Platform sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
+            <a className="rc-button rc-button-primary rc-button-compact" href="#demo">Book a demo</a>
+          </div>
+          <details className="rc-menu">
+            <summary aria-label="Open navigation">Menu</summary>
+            <nav aria-label="Mobile navigation">
+              {nav.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
+              <a href={signIn}>Platform sign in</a>
+              <a className="rc-button rc-button-primary" href="#demo">Book a school demo</a>
+            </nav>
+          </details>
+        </div>
+      </header>
+
+      <main id="main">
+        <section className="rc-hero">
+          <div className="rc-container rc-hero-grid">
+            <div className="rc-hero-copy">
+              <p className="rc-eyebrow">School transport · Kampala, Uganda</p>
+              <h1>Live locations and boarding records for every school journey.</h1>
+              <p className="rc-lead">RideChime brings pickup routes, vehicle live locations and staff-confirmed boarding into one place for vans, minibuses, cars and buses. Explore our supervised pilot for schools and transport operators.</p>
+              <div className="rc-hero-actions">
+                <a className="rc-button rc-button-primary" href="#demo">Book a school demo<ArrowRight size={18} aria-hidden="true" /></a>
+                <a className="rc-button rc-button-secondary" href={chat}><MessageCircle size={18} aria-hidden="true" />Chat on WhatsApp</a>
+              </div>
+              <p className="rc-pilot-note"><span aria-hidden="true" />Now inviting schools for a supervised pilot.</p>
+            </div>
+            <ProductPreview />
+          </div>
+        </section>
+
+        <section className="rc-strip" aria-label="What RideChime covers">
+          <div className="rc-container rc-strip-grid">
+            <p><MapPin size={18} aria-hidden="true" /><span><b>Live locations</b>See where the school vehicle last reported, and how recently.</span></p>
+            <p><ClipboardCheck size={18} aria-hidden="true" /><span><b>Staff-confirmed boarding</b>Attendants record who boarded and who got off.</span></p>
+            <p><LockKeyhole size={18} aria-hidden="true" /><span><b>Invitation-only access</b>Each school’s records stay in its own private workspace.</span></p>
+          </div>
+        </section>
+
+        <section className="rc-section" id="how-it-works">
+          <div className="rc-container">
+            <div className="rc-section-head">
+              <p className="rc-eyebrow">How it works</p>
+              <h2>One clear record of the school run.</h2>
+              <p>A useful record starts with a plan and the people who confirm what happens.</p>
+            </div>
+            <ol className="rc-steps">
+              {steps.map(({n, icon: Icon, title, body}) => (
+                <li key={n} className="rc-card">
+                  <span className="rc-step-top"><span className="rc-step-n">{n}</span><Icon size={20} aria-hidden="true" /></span>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="rc-section rc-section-navy" id="schools">
+          <div className="rc-container">
+            <div className="rc-section-head rc-section-head-light">
+              <p className="rc-eyebrow">Schools and transport operators</p>
+              <h2>Built for the people who run school transport.</h2>
+              <p>RideChime is an independent service. Schools can use it directly, and transport operators can bring the schools they serve.</p>
+            </div>
+            <div className="rc-audience">
+              <article className="rc-audience-card">
+                <School size={22} aria-hidden="true" />
+                <h3>For schools</h3>
+                <p>Plan pickup routes, review available live locations and record boarding. Your transport details stay in one shared view for your team.</p>
+                <ul className="rc-checks">
+                  <li><Check size={16} aria-hidden="true" />Plan routes and pickup places</li>
+                  <li><Check size={16} aria-hidden="true" />Record who boarded and got off</li>
+                  <li><Check size={16} aria-hidden="true" />Keep a clear correction history</li>
+                  <li><Check size={16} aria-hidden="true" />Confirm the physical empty-vehicle check</li>
+                </ul>
+              </article>
+              <article className="rc-audience-card">
+                <Building2 size={22} aria-hidden="true" />
+                <h3>For transport operators</h3>
+                <p>Run vehicles for one school or several. Each school you serve is set up in its own private workspace, agreed with that school.</p>
+                <ul className="rc-checks">
+                  <li><Check size={16} aria-hidden="true" />Vans, minibuses, cars and buses</li>
+                  <li><Check size={16} aria-hidden="true" />Location reporting verified before rollout</li>
+                  <li><Check size={16} aria-hidden="true" />School records kept separate</li>
+                  <li><Check size={16} aria-hidden="true" />Supervised pilot before families join</li>
+                </ul>
+              </article>
+            </div>
+            <a className="rc-text-link rc-text-link-light" href="#demo">Talk to us about your school run<ArrowRight size={16} aria-hidden="true" /></a>
+          </div>
+        </section>
+
+        <section className="rc-section" id="families">
+          <div className="rc-container rc-split">
+            <div>
+              <p className="rc-eyebrow">Families</p>
+              <h2>Start with the school. Prepare for parents.</h2>
+              <p>The pilot starts with the school team: the route, the vehicle and the people recording boarding and handover.</p>
+              <p>Before families join, we agree access and updates with the school and test the journey together. Clear information should come with a clear explanation of what it means.</p>
+            </div>
+            <aside className="rc-card rc-callout">
+              <Clock3 size={20} aria-hidden="true" />
+              <div>
+                <h3>A timestamp matters.</h3>
+                <p>A saved location is not always a current location. RideChime’s live view shows when the vehicle last reported its location.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section className="rc-section rc-section-tint">
+          <div className="rc-container">
+            <div className="rc-section-head">
+              <p className="rc-eyebrow">The pilot</p>
+              <h2>Your school. Your pilot.</h2>
+              <p>A practical start, with the scope agreed before the first supervised journey.</p>
+            </div>
+            <ol className="rc-pilot">
+              {pilot.map(({icon: Icon, title, body}) => (
+                <li key={title} className="rc-card"><Icon size={20} aria-hidden="true" /><h3>{title}</h3><p>{body}</p></li>
+              ))}
+            </ol>
+            <p className="rc-footnote"><ShieldCheck size={16} aria-hidden="true" />Optional card readers and notification channels are scoped separately. We explain what is ready before you commit.</p>
+          </div>
+        </section>
+
+        <section className="rc-section" id="questions">
+          <div className="rc-container rc-faq-wrap">
+            <div className="rc-section-head">
+              <p className="rc-eyebrow">Questions</p>
+              <h2>Before your school begins.</h2>
+              <p>Vehicle compatibility, family access and what RideChime can confirm during a supervised pilot.</p>
+              <a className="rc-text-link" href={chat}>Ask our team on WhatsApp<ArrowUpRight size={16} aria-hidden="true" /></a>
+            </div>
+            <div className="rc-faq">
+              {faqs.map(([q, a]) => (
+                <details key={q}>
+                  <summary>{q}</summary>
+                  <p>{a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="rc-section rc-section-navy rc-demo" id="demo">
+          <div className="rc-container rc-demo-grid">
+            <div>
+              <p className="rc-eyebrow">Book a school demo</p>
+              <h2>Let’s look at your school run together.</h2>
+              <p>Tell us about your school or transport service. We will walk you through RideChime and discuss a supervised pilot that fits your vehicles.</p>
+              <a className="rc-contact" href="tel:+256703664233"><Phone size={18} aria-hidden="true" /><span><small>Call or WhatsApp</small>0703 664 233</span></a>
+            </div>
+            <RideChimeDemo />
+          </div>
+        </section>
+      </main>
+
+      <footer className="rc-footer">
+        <div className="rc-container rc-footer-inner">
+          <Brand />
+          <p>School transport pilot · Kampala, Uganda</p>
+          <a className="rc-link-quiet" href={signIn}>Platform sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
+        </div>
+        <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime</span></div>
+      </footer>
+    </div>
+  );
+}
