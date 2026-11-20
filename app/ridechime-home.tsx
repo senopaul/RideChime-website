@@ -205,7 +205,7 @@ export default function RideChimeHome() {
         <section className="rc-hero">
           <div className="rc-container rc-hero-grid">
             <div className="rc-hero-copy">
-              <p className="rc-badge"><span aria-hidden="true" />Now inviting schools in Kampala</p>
+              <p className="rc-badge"><span aria-hidden="true" />Now inviting schools across Uganda</p>
               <h1>Every school ride, <span className="rc-hl">in sight and on record</span>.</h1>
               <p className="rc-lead">Live locations, staff-confirmed boarding and calm updates for schools, transport teams and families. RideChime works with the vans, minibuses and buses you already run.</p>
               <div className="rc-hero-actions">
