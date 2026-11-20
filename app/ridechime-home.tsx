@@ -377,16 +377,9 @@ export default function RideChimeHome() {
       <footer className="rc-footer">
         <div className="rc-container rc-footer-inner">
           <Brand />
-          <p>
-            School transport pilot · Kampala, Uganda
-            <br />
-            Powered by <a href="https://sky-worths.com">Sky Worth Ltd</a>, Kabalagala Market, Shop 15B, Kampala
-            <br />
-            Calls: <a href="tel:+256709469230">0709 469 230</a> · WhatsApp: <a href="https://wa.me/256703664233">wa.me/256703664233</a>
-          </p>
           <a className="rc-link-quiet" href={signIn}>Sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
         </div>
-        <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime, powered by Sky Worth Ltd</span></div>
+        <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime, powered by <a href="https://sky-worths.com" target="_blank" rel="noopener">Sky Worth Ltd</a></span></div>
       </footer>
     </div>
   );
