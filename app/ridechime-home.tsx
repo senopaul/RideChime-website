@@ -366,7 +366,8 @@ export default function RideChimeHome() {
               <p className="rc-eyebrow">Book a school demo</p>
               <h2>Let’s look at your school run together.</h2>
               <p>Tell us about your school or transport service. We will walk you through RideChime and discuss a supervised pilot that fits your vehicles.</p>
-              <a className="rc-contact" href="tel:+256703664233"><Phone size={18} aria-hidden="true" /><span><small>Call or WhatsApp</small>0703 664 233</span></a>
+              <a className="rc-contact" href="tel:+256709469230"><Phone size={18} aria-hidden="true" />Call 0709 469 230</a>
+              <a className="rc-contact" href="https://wa.me/256703664233"><MessageCircle size={18} aria-hidden="true" />Chat on WhatsApp</a>
             </div>
             <RideChimeDemo />
           </div>
@@ -376,10 +377,16 @@ export default function RideChimeHome() {
       <footer className="rc-footer">
         <div className="rc-container rc-footer-inner">
           <Brand />
-          <p>School transport pilot · Kampala, Uganda</p>
+          <p>
+            School transport pilot · Kampala, Uganda
+            <br />
+            Powered by <a href="https://sky-worths.com">Sky Worth Ltd</a>, Kabalagala Market, Shop 15B, Kampala
+            <br />
+            Calls: <a href="tel:+256709469230">0709 469 230</a> · WhatsApp: <a href="https://wa.me/256703664233">wa.me/256703664233</a>
+          </p>
           <a className="rc-link-quiet" href={signIn}>Sign in<ArrowUpRight size={15} aria-hidden="true" /></a>
         </div>
-        <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime</span></div>
+        <div className="rc-container rc-footer-base"><span>© {new Date().getFullYear()} RideChime, powered by Sky Worth Ltd</span></div>
       </footer>
     </div>
   );

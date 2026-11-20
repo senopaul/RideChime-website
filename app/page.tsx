@@ -10,7 +10,20 @@ const identity = {
       '@id': `${origin}/#organization`,
       name: 'RideChime',
       url: origin,
-      telephone: '+256703664233'
+      telephone: '+256709469230',
+      parentOrganization: {
+        '@type': 'Organization',
+        name: 'Sky Worth Ltd',
+        legalName: 'SKY WORTH LIMITED',
+        url: 'https://sky-worths.com/',
+        foundingDate: '2014-01-27',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Kabalagala Market, Shop 15B',
+          addressLocality: 'Kampala',
+          addressCountry: 'UG'
+        }
+      }
     },
     {
       '@type': 'WebSite',
